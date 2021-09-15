@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = 'pypi'
+
+[packages]
+django = ">=2.2,<3.0"
+django-environ = "*"
+djangorestframework = "*"
+pytest = "*"
+pytest-django = "*"
+drf-yasg = "*"
+django-filter = "*"
+pytest-cov = "*"
+psycopg2-binary = "*"
+gunicorn = "*"
+
+[dev-packages]
+flake8 = "*"

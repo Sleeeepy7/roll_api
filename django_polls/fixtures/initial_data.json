@@ -1,0 +1,104 @@
+[{
+
+        "model": "auth.User",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$phW6COYE5wwk$AVMgXRcyPY8knb9wEWlQtp7k9GU+9O3PMtgM2PqOHQo=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "Test-Admin",
+            "is_staff": true,
+            "is_active": true,
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$phW6COYE5wwk$AVMgXRcyPY8knb9wEWlQtp7k9GU+9O3PMtgM2PqOHQo=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Test-User",
+            "is_staff": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "polls.Poll",
+        "pk": 1,
+        "fields": {
+            "title": "Poll about this service",
+            "start_date": "2020-07-24",
+            "end_date": "3020-07-24",
+            "description": "Example poll."
+        }
+    },
+    {
+        "model": "polls.Question",
+        "pk": 1,
+        "fields": {
+            "poll": 1,
+            "text": "Write your review",
+            "type": "TEXT"
+        }
+    },
+    {
+        "model": "polls.Question",
+        "pk": 2,
+        "fields": {
+            "poll": 1,
+            "text": "Rate service",
+            "type": "CHOICE"
+        }
+    },
+    {
+        "model": "polls.Question",
+        "pk": 3,
+        "fields": {
+            "poll": 1,
+            "text": "Tag service",
+            "type": "MULTICHOICE"
+        }
+    },
+    {
+        "model": "polls.Choice",
+        "pk": 1,
+        "fields": {
+            "question": 1,
+            "text": "Enter text"
+        }
+    },
+    {
+        "model": "polls.Choice",
+        "pk": 2,
+        "fields": {
+            "question": 2,
+            "text": "Good"
+        }
+    },
+    {
+        "model": "polls.Choice",
+        "pk": 3,
+        "fields": {
+            "question": 2,
+            "text": "Bad"
+        }
+    },
+    {
+        "model": "polls.Choice",
+        "pk": 4,
+        "fields": {
+            "question": 3,
+            "text": "useful"
+        }
+    },
+    {
+        "model": "polls.Choice",
+        "pk": 5,
+        "fields": {
+            "question": 3,
+            "text": "withoutui"
+        }
+    }
+
+]

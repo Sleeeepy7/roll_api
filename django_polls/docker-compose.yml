@@ -1,0 +1,30 @@
+version: "2.10"
+
+services:
+
+  api:
+    build: .
+    container_name: api
+    environment:
+      DATABASE_URL: "sqlite:///db.sqlite"
+      DEBUG: "False"
+    volumes:
+      - ./db.sqlite:/code/db.sqlite
+    networks:
+      - docker-network
+    ports:
+      - "8000:8000"
+
+  autotests:
+    build: .
+    container_name: api.autotests
+    command: pipenv run pytest -x
+    environment:
+      DATABASE_URL: "sqlite:///test_db.sqlite"
+      DEBUG: "True"
+    networks:
+      - docker-network
+
+networks:
+  docker-network:
+    driver: bridge
